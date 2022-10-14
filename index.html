@@ -4,8 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Website Development</title>
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+
   </head>
   <body>
+    <div class="my-container">
+      <a href="generic.html" type="button" class="btn btn-outline-primary" target="_blank">Primary</a>
     <h1>Welcome to Software Journal Club</h1>
     <h2>Session 3.a | Building a Website</h2>
     <p>Today we're going to be building a website in several stages. To start with this folder, run:</p>
@@ -23,7 +30,54 @@
     </ul>
   
     <h2>Following Along</h2>
-    <p>You can edit the html/css files in whatever text editor you prefer. To visualize the webpage you're creating, you can simply double click to open in your default web browser.</p>
+    <p>You can edit the html/css files in whatever text editor you prefer. To visualize the webpage you're creating, you can simply double click to open in your default web browser. When you save changes to the file, refreshing the page (e.g., cmd+r or ctrl+r) will show your changes.</p>
     <p>Alternatively, to use VSCode as I am here, install the "<b>Live Preview (Microsoft)</b>" extension to VSCode. If you do, you'll see changes to the file happen in real time. </p>
-</body>
+
+  <h2>Part I: Structure</h2>
+  <p>Everything in HTML is contained within some type of open-close tag, much like in latex (e.g., \begin{equation} \end{equation}). These tags provide the information about how to style or format the content contained within. HTML tags are contained within&lt; &gt; symbols, with the closing tag being the forward slash plus the name (e.g., &lt; i&gt;this would be italics&lt; /i&gt;).</p>
+
+  <p>From a structural standpoint, the primary html "container" tag is the div tag(&lt;div&gt;). Divs can be used to contain any block of content for which a particular set of styles and formattings should be used. These can be set on the fly... for example, you can add an "align" parameter to a div, like so: &lt;div align='center'&gt;&lt;/div&gt;</p>
+
+<div align="center">
+  This is a center aligned div!
+</div>
+<p>As soon as I start writing after the close of the div, I revert to whatever the default style was outside of the div.</p>
+
+<p>We can use divs to immediately style this 1980s-ass looking website to look a little nicer. My first aesthetic concern is that our text is filling all the way to the edges of the page.</p>
+<p>To fix this, we will create a new <b>Class.</b> By creating a class (in our CSS file) we can tell a div to use that style, and we can specify some padding for our site there. </p>
+
+<p>On modern websites, divs are used to separate and set stylings for almost everything. Most likely, you won't be writing a site from scratch, you'll be using a theme, or elements, to fill out your site. Being familiar with divs and how they work will allow you to identify them in these themes and modify them as necessary.</p>
+
+<h2>Part II: Styling</h2>
+<p>Like other markup languages, styles are applied with tags. Where markdown uses *asterisk* for italics, html uses &lt; i&gt;bracket tags&lt; /i&gt;). The standard ones in html are: 
+  <ul>
+    <li>i: italics</li>
+    <li>b: bold</li>
+    <li>u: underline</li>
+    <li>strong: strong</li>
+    <li>a href="": links</li>
+    <li>img src="": images </li>
+    <li>ul: unordered list</li>
+    <li>ol: ordered list</li>
+    <li>li: list element</li>
+    <li>h1/h2/h3: headers</li>
+    <li>More: <a href="https://www.w3schools.com/TAGS/default.asp">here's a list.</a></li>
+  </ul>
+  Anything more complicated with these is handled via CSS with exact specifications.
+</p>
+<h2>Part III: CSS</h2>
+<p>
+  CSS (cascading style sheets) are a way to overwrite the default style of html, as well as define new classes with specific styles and then use them in our sites. 
+</p>
+<p>
+  Again, when building out of other elements (like bootstrap), or in a theme (most themes use bootstrap), we are not interested in learning css from scratch (it's extensive), but more in finding where in a css file a parameter we want to change is, and learn how to change it. 
+</p>
+<h2>Part IV: Bootstrap</h2>
+<p>Here we'll modify our site by using bootstrap elements. It is possible to build a decent looking site from scratch using just the styles, containers, and components available in bootstrap. Beyond that, almost every freely available template/theme uses these elements extensively, so being loosely familiar with them will help you modify template files a lot more efficiently. </p>
+<section id="something">
+
+<p>Here we'll modify our site by using bootstrap elements. It is possible to build a decent looking site from scratch using just the styles, containers, and components available in bootstrap. Beyond that, almost every freely available template/theme uses these elements extensively, so being loosely familiar with them will help you modify template files a lot more efficiently. </p>
+</section>
+</div>
+  </body>
 </html>
